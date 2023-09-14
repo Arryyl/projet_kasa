@@ -1,0 +1,41 @@
+.error-content h1 {
+    font-weight: 700;
+    font-size: 288px;
+    text-align: center;
+    color: #FF6060;
+    margin: 0 auto;
+}
+
+.error-content p {
+    font-weight: 500;
+    font-size: 36px;
+    color: #FF6060;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.link-error {
+    width: 100%;
+    text-align: center;
+    color: #FF6060;
+    margin-bottom: 10%;
+}
+
+.error-content {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 599px) {
+    .error-content h1 {
+        font-size: 96px;
+        margin-top: 30%;
+    }
+
+    .error-content p {
+        font-size: 18px;
+        max-width: 260px;
+        text-align: center;
+        margin: 10px auto 30% auto;
+    }
+}

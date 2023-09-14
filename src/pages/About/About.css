@@ -1,0 +1,13 @@
+.about-collapse .content.show {
+    height: fit-content;
+}
+
+.about-collapse {
+    margin: 40px 0;
+}
+
+@media only screen and (max-width: 599px) {
+    .about-collapse {
+        margin: 20px;
+    }
+}

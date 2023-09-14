@@ -1,0 +1,46 @@
+a {
+    color: #FF6060;
+}
+
+.header {
+    margin: 20px;
+}
+
+.header-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34.22px;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 599px) {
+    .header-body img {
+        width: 60%;
+    }
+
+    .nav {
+        gap: 15px;
+    }
+
+    .link {
+        font-size: 17px;
+        min-width: 70px;
+    }
+}

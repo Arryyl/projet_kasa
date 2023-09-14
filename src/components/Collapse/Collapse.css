@@ -1,0 +1,90 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px;
+}
+
+.accordion {
+    width: 100%;
+}
+
+.item {
+    background-color: #F6F6F6;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.housing-collapse .title {
+    color: white;
+    background-color: #FF6060;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 55%;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.about-collapse .title {
+    color: white;
+    background-color: #FF6060;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 80%;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+    line-height: 25.67px;
+    color: #FF6060;
+}
+
+.content.show {
+    max-height: 9999px;
+    transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+    padding: 20px;
+}
+
+span {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.chevron {
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 599px) {
+    .accordion {
+        width: 100%;
+    }
+
+    .housing-collapse .title {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 25%;
+    }
+
+    .about-collapse .title {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 60%;
+    }
+
+    .wrapper {
+        margin: 40px 10px;
+    }
+}
