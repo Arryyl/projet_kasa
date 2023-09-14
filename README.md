@@ -9,5 +9,4 @@ Ce projet utilise Create React App pour démarrer rapidement le développement d
    git clone https://github.com/Arryyl/projet_kasa.git
 
 2. Demarrage :
-   Npm necessaire
-   -> npm start
+   ```Npm necessaire -> npm start
