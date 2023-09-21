@@ -46,6 +46,7 @@
   .banner-container {
     margin: 20px;
     min-height: 111px;
+    margin: 0 15px 15px;
   }
 
   .slogan {
@@ -53,7 +54,6 @@
     text-align: left;
     max-height: 38px;
     width: 100%;
-    margin: 0 15px 15px;
     position: absolute;
     top: 25%;
     left: 40%;
