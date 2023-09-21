@@ -33,6 +33,9 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    -webkit-user-select: none; /* */
+    -ms-user-select: none; /* */
+    user-select: none; /* */
 }
 
 .arrow {
@@ -56,7 +59,7 @@
 @media only screen and (max-width: 599px) {
     .slideshow {
         padding-bottom: calc(815 / 1440 * 100vw);
-        min-height: 255px;
+        min-height: 255px;          
     }
 
     .slideshow img {
