@@ -1,3 +1,4 @@
+//composant racine qui gère le routage et affiche les pages en fonction de l'URL
 import React from 'react';
 import Layout from './components/Layout/Layout';
 import { Route, Routes } from 'react-router-dom';
