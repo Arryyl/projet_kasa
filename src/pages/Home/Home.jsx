@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'; // Importe le composant Link
 import Banner from '../../components/Banner/Banner';
 import jsonData from '../../datas/logements.json';
-import './Home.css';
+import './Home.scss';
 import Card from '../../components/Cards/Cards';
 import bannerImage from '../../assets/ban-accueil.png';
 

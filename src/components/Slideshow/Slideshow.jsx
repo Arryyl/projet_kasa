@@ -1,4 +1,4 @@
-import "./Slideshow.css";
+import "./Slideshow.scss";
 import React, { useState } from "react";
 import { ChevronLeft } from "../Icons/ChevronLeft";
 import { ChevronRight } from "../Icons/ChevronRight";

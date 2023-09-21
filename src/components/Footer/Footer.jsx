@@ -1,4 +1,4 @@
-import "./Footer.css";
+import "./Footer.scss";
 import React from "react";
 import logo from '../../assets/logo-footer.png';
 

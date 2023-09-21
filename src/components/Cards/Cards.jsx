@@ -1,5 +1,5 @@
 import React from 'react';
-import './Cards.css';
+import './Cards.scss';
 
 export default function Cards({ title, cover, description }) {
   return (

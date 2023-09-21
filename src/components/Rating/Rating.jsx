@@ -1,5 +1,5 @@
 import React from 'react';
-import './Rating.css';
+import './Rating.scss';
 import StarActive from '../Icons/StarActive';
 import StarInactive from '../Icons/StarInactive';
 

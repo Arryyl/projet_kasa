@@ -6,7 +6,7 @@ import Home from './pages/Home/Home';
 import Error404 from './pages/Error404/Error404';
 import About from './pages/About/About';
 import HousingSheet from './pages/HousingSheet/HousingSheet';
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (

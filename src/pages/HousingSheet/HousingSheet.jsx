@@ -5,7 +5,7 @@ import jsonData from '../../datas/logements.json';
 import Slideshow from '../../components/Slideshow/Slideshow';
 import Tag from '../../components/Tag/Tag';
 import Collapse from '../../components/Collapse/Collapse';
-import './HousingSheet.css';
+import './HousingSheet.scss';
 import Rating from '../../components/Rating/Rating';
 
 export default function HousingSheet() {

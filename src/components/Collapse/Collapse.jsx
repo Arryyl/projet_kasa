@@ -1,4 +1,4 @@
-import "./Collapse.css";
+import "./Collapse.scss";
 import React, { useState } from "react";
 import { ChevronUp } from "../Icons/ChevronUp";
 import { ChevronDown } from "../Icons/ChevronDown";
