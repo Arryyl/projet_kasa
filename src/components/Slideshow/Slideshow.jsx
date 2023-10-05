@@ -1,24 +1,26 @@
+// Import des styles et dépendances
 import "./Slideshow.scss";
 import React, { useState } from "react";
 import { ChevronLeft } from "../Icons/ChevronLeft";
 import { ChevronRight } from "../Icons/ChevronRight";
 
-export default function Slideshow({ images }) {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+export default function Slideshow({ images }) { // Definition du composant et son prop
+  const [currentImageIndex, setCurrentImageIndex] = useState(0); // initialisation de létat initial / 0 = premiere image
 
-  const goToPreviousImage = () => {
+  // Fonctions de navigation entre les images
+  const goToPreviousImage = () => { // Précedente
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
 
-  const goToNextImage = () => {
+  const goToNextImage = () => { // Suivante
     setCurrentImageIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
 
-  // Vérifiez si vous avez plus d'une image
+  // Verif si vous avez plus d'une image
   const shouldShowControls = images.length > 1;
 
   return (

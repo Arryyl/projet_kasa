@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Importe le composant Link
+import { Link } from 'react-router-dom';
 import Banner from '../../components/Banner/Banner';
 import jsonData from '../../datas/logements.json';
 import './Home.scss';
