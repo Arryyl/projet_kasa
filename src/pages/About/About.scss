@@ -10,6 +10,10 @@ $about-collapse-mobile-margin: 20px;
 @mixin about-collapse-styles {
   margin: $about-collapse-margin 0;
 
+  .accordion {
+    width: 90%;
+  }
+
   @media only screen and (max-width: 599px) {
     margin: $about-collapse-mobile-margin;
   }
@@ -20,3 +24,5 @@ $about-collapse-mobile-margin: 20px;
 }
 
 @include show-content;
+
+
