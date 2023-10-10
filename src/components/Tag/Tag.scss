@@ -1,22 +1,24 @@
-.tag {
-    color: white;
-    font-weight: bold;
-    background-color: #FF6060;
-    border-radius: 10px;
-    width: calc(315 / 1440 * 100vw);
-    padding: 5px 10px 5px 10px;
-    text-align: center;
-    margin-right: 4px;
-    max-width: 160px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+$tag-bg-color: #FF6060;
+$tag-max-width: 160px;
+$tag-padding: 5px 10px;
 
-@media only screen and (max-width: 599px) {
-    .tag {
-        width: auto;
-        padding: 5px 10px 5px 10px;
-        max-width: 360px;
-    }
+.tag {
+  color: white;
+  font-weight: bold;
+  background-color: $tag-bg-color;
+  border-radius: 10px;
+  width: calc(315 / 1440 * 100vw);
+  padding: $tag-padding;
+  text-align: center;
+  margin-right: 4px;
+  max-width: $tag-max-width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media only screen and (max-width: 599px) {
+    width: auto;
+    max-width: 360px;
+    padding: $tag-padding;
+  }
 }

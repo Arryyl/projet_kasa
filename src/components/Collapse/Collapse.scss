@@ -1,25 +1,15 @@
-.wrapper {
+$primary-color: #FF6060;
+$secondary-color: #F6F6F6;
+
+@mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 0px;
 }
 
-.accordion {
-    width: 100%;
-}
-
-.item {
-    background-color: #F6F6F6;
-    margin-bottom: 5px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-}
-
-.housing-collapse .title {
+@mixin title-style {
     color: white;
-    background-color: #FF6060;
+    background-color: $primary-color;
     width: 100%;
     height: 40px;
     display: flex;
@@ -30,17 +20,29 @@
     padding: 0 10px;
 }
 
-.about-collapse .title {
-    color: white;
-    background-color: #FF6060;
+.wrapper {
+    @include flex-center;
+    margin: 40px 0px;
+}
+
+.accordion {
     width: 100%;
-    height: 40px;
+}
+
+.item {
+    background-color: $secondary-color;
+    margin-bottom: 5px;
     display: flex;
-    justify-content: space-evenly;
-    gap: 80%;
-    align-items: center;
+    flex-direction: column;
     border-radius: 10px;
-    padding: 0 10px;
+}
+
+.housing-collapse .title {
+    @include title-style;
+}
+
+.about-collapse .title {
+    @include title-style;
 }
 
 .content {
@@ -48,7 +50,7 @@
     overflow: hidden;
     transition: all 0.5s ease;
     line-height: 25.67px;
-    color: #FF6060;
+    color: $primary-color;
 }
 
 .content.show {

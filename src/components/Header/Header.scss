@@ -1,9 +1,13 @@
-.header {
-    padding: 20px;
+$header-padding: 20px;
+
+@mixin header {
+  padding: $header-padding;
+
+  @media only screen and (max-width: 599px) {
+    padding: 0;
+  }
 }
 
-@media only screen and (max-width: 599px) {
-    .header {
-        padding: 0;
-    }
+.header {
+  @include header;
 }

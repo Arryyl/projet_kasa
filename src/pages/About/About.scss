@@ -1,13 +1,22 @@
-.about-collapse .content.show {
+$about-collapse-margin: 40px;
+$about-collapse-mobile-margin: 20px;
+
+@mixin show-content {
+  .content.show {
     height: fit-content;
+  }
+}
+
+@mixin about-collapse-styles {
+  margin: $about-collapse-margin 0;
+
+  @media only screen and (max-width: 599px) {
+    margin: $about-collapse-mobile-margin;
+  }
 }
 
 .about-collapse {
-    margin: 40px 0;
+  @include about-collapse-styles;
 }
 
-@media only screen and (max-width: 599px) {
-    .about-collapse {
-        margin: 20px;
-    }
-}
+@include show-content;

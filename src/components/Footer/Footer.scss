@@ -1,11 +1,20 @@
+$footer-background-color: black;
+$footer-text-color: white;
+$footer-gap: 20px;
+$footer-padding: 20px;
+
+@mixin footer {
+  background-color: $footer-background-color;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $footer-text-color;
+  gap: $footer-gap;
+  padding: $footer-padding 0;
+  width: 100% !important;
+}
+
 .footer {
-    background-color: black;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    gap: 20px;
-    padding: 20px 0;
-    width: 100% !important;
+  @include footer;
 }

@@ -1,12 +1,32 @@
+$grid-container-gap: 40px;
+$grid-container-margin: 40px;
+$grid-container-padding: 30px 40px;
+$grid-background-color: #F6F6F6;
+$grid-border-radius: 25px;
+
+@mixin grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $grid-container-gap;
+  margin: 0 $grid-container-margin $grid-container-margin $grid-container-margin;
+  background-color: $grid-background-color;
+  border-radius: $grid-border-radius;
+  padding: $grid-container-padding;
+
+  @media only screen and (max-width: 599px) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    a {
+      padding: 20px;
+    }
+  }
+}
+
 @media only screen and (min-width: 600px) {
   .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    margin: 0 40px 40px 40px;
-    background-color: #F6F6F6;
-    border-radius: 25px;
-    padding: 30px 40px;
+    @include grid-container;
   }
 }
 
@@ -15,6 +35,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
     a {
       padding: 20px;
     }

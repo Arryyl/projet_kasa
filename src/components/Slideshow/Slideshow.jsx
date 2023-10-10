@@ -26,10 +26,10 @@ export default function Slideshow({ images }) { // Definition du composant et so
   return (
     <div className="slideshow">
       <div className="image-container">
-        <img
+      <img
           src={images[currentImageIndex]}
-          alt={`Image ${currentImageIndex + 1}`}
-        />
+          alt={`Slide ${currentImageIndex + 1}`}
+      />
         {shouldShowControls && (
           <div className="nbr">
             {currentImageIndex + 1}/{images.length}
