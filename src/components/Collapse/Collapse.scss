@@ -37,64 +37,52 @@ $secondary-color: #F6F6F6;
     border-radius: 10px;
 }
 
-.housing-collapse .title {
+.title {
     @include title-style;
-}
-
-.about-collapse .title {
-    @include title-style;
-}
-
-.content.show {
-    max-height: 9999px;
-    transition: all 0.5s ease;
-    padding: 20px;
-}
-
-img {
-    font-size: 32px;
-    font-weight: bold;
 }
 
 .chevron {
     display: flex;
     align-items: center;
     transform: rotate(0deg);
-    transition: 0.4s 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 
 .rotated {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
     transition: 0.4s ease-in-out;
 }
 
 .collapse_toggle {
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out, height 0.4s 0.4s ease-in-out;
-    line-height: 25.67px;
-    color: $primary-color;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+
+    p {
+        color: $primary-color;
+        transform: translateY(-100%);
+        transition: transform 0.4s ease-in-out;
+    }
 }
 
 .animated {
-    opacity: 1;
-    transition: height 0.4s ease-in-out, opacity 0.4s 0.4s ease-in-out;
+    max-height: 9999px;
+
+    p {
+        transform: translateY(0%);
+    }
 }
+
 
 @media only screen and (max-width: 599px) {
     .accordion {
         width: 100%;
     }
 
-    .housing-collapse .title {
+    .title {
         display: flex;
         justify-content: space-evenly;
         gap: 25%;
-    }
-
-    .about-collapse .title {
-        display: flex;
-        justify-content: space-evenly;
-        gap: 60%;
     }
 
     .wrapper {

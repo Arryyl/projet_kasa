@@ -1,32 +1,33 @@
 // Import des styles et dépendances
 import "./Collapse.scss";
 import React, { useState } from "react";
-import ChevronUp  from "../../assets/arrow_down.svg";
+import ChevronUp  from "../../assets/arrow_up.svg";
 
 
-export default function Collapse({ items, customClass }) { // Definition du composant et ses "props"
+export default function Collapse({ items, customClass }) {
   const [toggle, setToggle] = useState(false);
 
-  const toggleState= () => {
+  const toggleState = () => {
     setToggle(!toggle);
-    console.log("test")
+    console.log("test");
   }
 
-  return ( // Rendu JSX en format accordéon (Mise en place des composants et utilisation de la fonction togglecollapse)
+  return (
     <div className={`wrapper ${customClass}`}>
       <div className="accordion">
         {items.map((item, index) => (
           <div className="item" key={index}>
             <div className="title" onClick={toggleState}>
               <h2>{item.title}</h2>
-              <img className={toggle ? "Chevron rotated": "Chevron"}
+              <img
+                className={`chevron ${toggle ? "rotated" : ""}`}
                 src={ChevronUp}
                 alt="Chevron"
               />
             </div>
-            <div className={toggle ? "collapse_toggle animated": "collapse_toggle"}>
-              <p aria-hidden={toggle ? "true": "false"}>{item.paragraphe}</p>
-            </div>
+            <div className={`collapse_toggle ${toggle ? "animated" : ""}`}>
+    <p aria-hidden={toggle ? "true" : "false"}>{item.paragraphe}</p>
+</div>
           </div>
         ))}
       </div>
